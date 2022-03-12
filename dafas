@@ -1,0 +1,23 @@
+[33mcommit c432f8e79facc45b8b872b9927740843ea44e1c1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: cooper <mail@coopersimpson.me>
+Date:   Sat Mar 12 18:26:48 2022 +1000
+
+    Finished logic for playRound function
+
+[33mcommit a4ca457870b08cda04133b7007dc6e76fec0d042[m
+Author: cooper <mail@coopersimpson.me>
+Date:   Sat Mar 12 14:56:30 2022 +1000
+
+    Added computerPlay function
+
+[33mcommit e4da044f48b5749fd50643990ad6051f6cd90677[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: cooper <mail@coopersimpson.me>
+Date:   Sat Mar 12 14:38:34 2022 +1000
+
+    Added HTML skeleton
+
+[33mcommit 32412d2c0e785a2c1f470bbfe1e0230b9e05e061[m
+Author: Cooper Simpson <mail@coopersimpson.me>
+Date:   Sat Mar 12 14:35:00 2022 +1000
+
+    Initial commit

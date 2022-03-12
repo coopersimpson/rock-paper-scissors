@@ -1,20 +1,34 @@
+// Function for computer selection
 function computerPlay() {
   let options = ["Rock", "Paper", "Scissors"];
   const randomElement = options[Math.floor(Math.random() * options.length)];
   return randomElement;
 }
 
-// Set computer selection
-let computerSelection = computerPlay();
+// Function to filter player input and scan for valid input
+function playerPlay() {
+  let selection = prompt("Enter: Rock Paper or Scissors");
+  selection =
+    selection.charAt(0).toUpperCase() + selection.slice(1).toLowerCase();
+  if (
+    selection === "Rock" ||
+    selection === "Paper" ||
+    selection === "Scissors"
+  ) {
+    return selection;
+  } else {
+    return alert("Not a valid input");
+  }
+}
 
-// Player chooses selection
-let choice = prompt("Enter: Rock Paper or Scissors");
-let playerSelection =
-  choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+// Set variables for Computer and Player selections
+let computerSelection = String(computerPlay());
+let playerSelection = String(playerPlay());
 
 console.log(playerSelection);
 console.log(computerSelection);
 
+// Logic to play round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "Rock" && computerSelection === "Scissors") {
     console.log(`You win ${playerSelection} beats ${computerSelection}`);
@@ -36,11 +50,19 @@ function playRound(playerSelection, computerSelection) {
 console.log(playRound(playerSelection, computerSelection));
 
 // //loop with a function that calls playRound, game of 5
-
 // function game() {
 //   for (let i = 0; i < 5; i++) {
-//     playRound(playerSelection, computerSelection);
+//     return playRound(playerSelection, computerSelection);
 //   }
 // }
 
-// how to prompt input on each loop through?
+// console.log(game());
+
+// // Loop the playerchoose function and store it in an array. then iterate through each index in the game() function ?
+
+// let playerChoiceArray = [];
+
+// for (let i = 0; i < 5; i++) {
+//   playerChoiceArray.push(playerChoose());
+//   console.log(playerChoiceArray);
+// }
