@@ -48,21 +48,3 @@ function playRound(playerSelection, computerSelection) {
 }
 
 console.log(playRound(playerSelection, computerSelection));
-
-// //loop with a function that calls playRound, game of 5
-// function game() {
-//   for (let i = 0; i < 5; i++) {
-//     return playRound(playerSelection, computerSelection);
-//   }
-// }
-
-// console.log(game());
-
-// // Loop the playerchoose function and store it in an array. then iterate through each index in the game() function ?
-
-// let playerChoiceArray = [];
-
-// for (let i = 0; i < 5; i++) {
-//   playerChoiceArray.push(playerChoose());
-//   console.log(playerChoiceArray);
-// }
