@@ -6,10 +6,8 @@ function computerPlay() {
 }
 
 // Function to filter player input and scan for valid input
-function playerPlay() {
-  let selection = prompt("Enter: Rock Paper or Scissors");
-  selection =
-    selection.charAt(0).toUpperCase() + selection.slice(1).toLowerCase();
+function playerPlay(selection) {
+  selection = selection.charAt(0).toUpperCase() + selection.slice(1).toLowerCase();
   if (
     selection === "Rock" ||
     selection === "Paper" ||
@@ -21,30 +19,41 @@ function playerPlay() {
   }
 }
 
-// Set variables for Computer and Player selections
-let computerSelection = String(computerPlay());
-let playerSelection = String(playerPlay());
-
-console.log(playerSelection);
-console.log(computerSelection);
-
 // Logic to play round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "Rock" && computerSelection === "Scissors") {
-    console.log(`You win ${playerSelection} beats ${computerSelection}`);
+    scoreDisplay.textContent = (`You win ${playerSelection} beats ${computerSelection}`);
   } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-    console.log(`You lose ${computerSelection} beats ${playerSelection}`);
+    scoreDisplay.textContent = (`You lose ${computerSelection} beats ${playerSelection}`);
   } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-    console.log(`You win ${playerSelection} beats ${computerSelection}`);
+    scoreDisplay.textContent = (`You win ${playerSelection} beats ${computerSelection}`);
   } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-    console.log(`You lose ${computerSelection} beats ${playerSelection}`);
+    scoreDisplay.textContent = (`You lose ${computerSelection} beats ${playerSelection}`);
   } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-    console.log(`You win ${playerSelection} beats ${computerSelection}`);
+    scoreDisplay.textContent = (`You win ${playerSelection} beats ${computerSelection}`);
   } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-    console.log(`You lose ${computerSelection} beats ${playerSelection}`);
+    scoreDisplay.textContent = (`You lose ${computerSelection} beats ${playerSelection}`);
   } else {
-    console.log(`Its a tie, ${playerSelection} ties with ${computerSelection}`);
+    scoreDisplay.textContent = (`Its a tie, ${playerSelection} ties with ${computerSelection}`);
   }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+const rockBtn = document.querySelector("#rock")
+rockBtn.addEventListener('click', () => {
+  playerSelection = "Rock"
+  playRound(playerSelection, computerPlay())
+});
+
+const paperBtn = document.querySelector("#paper")
+paperBtn.addEventListener('click', () => {
+  playerSelection = "Paper"
+  playRound(playerSelection, computerPlay())
+});
+
+const scissorsBtn = document.querySelector("#scissors")
+scissorsBtn.addEventListener('click', () => {
+  playerSelection = "Scissors"
+  playRound(playerSelection, computerPlay())
+});
+
+const scoreDisplay = document.querySelector("#score")
