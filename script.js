@@ -47,6 +47,8 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+const playAgain = document.createElement('button')
+
 const rockBtn = document.querySelector("#rock")
 rockBtn.addEventListener('click', () => {
   playerSelection = "Rock"
@@ -58,12 +60,16 @@ rockBtn.addEventListener('click', () => {
     rockBtn.remove()
     paperBtn.remove()
     scissorsBtn.remove()
+    document.getElementsByClassName("info")[0].appendChild(playAgain)
+    playAgain.textContent = "Play Again?"
   }
   else if (computerScore === 5){
     scoreDisplay.textContent = (`Game over, computer wins`)
     rockBtn.remove()
     paperBtn.remove()
     scissorsBtn.remove()
+    document.getElementsByClassName("info")[0].appendChild(playAgain)
+    playAgain.textContent = "Play Again?"
   }
 });
 
@@ -78,12 +84,16 @@ paperBtn.addEventListener('click', () => {
     rockBtn.remove()
     paperBtn.remove()
     scissorsBtn.remove()
+    document.getElementsByClassName("info")[0].appendChild(playAgain)
+    playAgain.textContent = "Play Again?"
   }
   else if (computerScore === 5){
     scoreDisplay.textContent = (`Game over, computer wins`)
     rockBtn.remove()
     paperBtn.remove()
     scissorsBtn.remove()
+    document.getElementsByClassName("info")[0].appendChild(playAgain)
+    playAgain.textContent = "Play Again?"
   }
 });
 
@@ -98,15 +108,23 @@ scissorsBtn.addEventListener('click', () => {
     rockBtn.remove()
     paperBtn.remove()
     scissorsBtn.remove()
+    document.getElementsByClassName("info")[0].appendChild(playAgain)
+    playAgain.textContent = "Play Again?"
   }
   else if (computerScore === 5){
     scoreDisplay.textContent = (`Game over, computer wins`)
     rockBtn.remove()
     paperBtn.remove()
     scissorsBtn.remove()
+    document.getElementsByClassName("info")[0].appendChild(playAgain)
+    playAgain.textContent = "Play Again?"
   }
 });
 
 const scoreDisplay = document.querySelector("#score")
 const playerDisplay = document.querySelector("#playerscore")
 const computerDisplay = document.querySelector("#computerscore")
+
+playAgain.addEventListener('click', () => {
+  window.location.reload()
+})

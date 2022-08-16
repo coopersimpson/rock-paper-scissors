@@ -19,7 +19,7 @@
     gap: 25px;
 }
 
-.buttons button {
+button {
     width: 100px;
     height: 50px;
     border-radius: 10px;
@@ -29,5 +29,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
