@@ -51,8 +51,8 @@ const rockBtn = document.querySelector("#rock")
 rockBtn.addEventListener('click', () => {
   playerSelection = "Rock"
   playRound(playerSelection, computerPlay())
-  playerDisplay.textContent = (`${playerScore}`);
-  computerDisplay.textContent = (`${computerScore}`);
+  playerDisplay.textContent = (`Player score: ${playerScore}`);
+  computerDisplay.textContent = (`Computer score: ${computerScore}`);
   if (playerScore === 5){
     scoreDisplay.textContent = (`Game over, you win.`)
     rockBtn.remove()
@@ -71,8 +71,8 @@ const paperBtn = document.querySelector("#paper")
 paperBtn.addEventListener('click', () => {
   playerSelection = "Paper"
   playRound(playerSelection, computerPlay())
-  playerDisplay.textContent = (`${playerScore}`);
-  computerDisplay.textContent = (`${computerScore}`);
+  playerDisplay.textContent = (`Player score: ${playerScore}`);
+  computerDisplay.textContent = (`Computer score: ${computerScore}`);
   if (playerScore === 5){
     scoreDisplay.textContent = (`Game over, you win.`)
     rockBtn.remove()
@@ -91,8 +91,8 @@ const scissorsBtn = document.querySelector("#scissors")
 scissorsBtn.addEventListener('click', () => {
   playerSelection = "Scissors"
   playRound(playerSelection, computerPlay())
-  playerDisplay.textContent = (`${playerScore}`);
-  computerDisplay.textContent = (`${computerScore}`);
+  playerDisplay.textContent = (`Player score: ${playerScore}`);
+  computerDisplay.textContent = (`Computer score: ${computerScore}`);
   if (playerScore === 5){
     scoreDisplay.textContent = (`Game over, you win.`)
     rockBtn.remove()
